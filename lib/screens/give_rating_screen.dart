@@ -96,7 +96,7 @@ class _GiveRatingScreenState extends State<GiveRatingScreen> {
                   }
                   if (rating > 2) {
                     open(
-                        'https://play.google.com/store/apps/details?id=com.raihansk.random_facts');
+                        'https://play.google.com/store/apps/details?id=com.raihansk.currect_affairs');
                   } else {
                     open('mailto:raihank126356@gmail.com');
                   }
