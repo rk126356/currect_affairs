@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:currect_affairs/screens/search_screen.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -17,30 +18,6 @@ class InsideCategoryScreen extends StatefulWidget {
 }
 
 class _InsideCategoryScreenState extends State<InsideCategoryScreen> {
-  DateTime selectedDate = DateTime.now();
-  DateTime initialDate = DateTime.now().subtract(const Duration(days: 2));
-
-  Future<void> _selectDate(BuildContext context) async {
-    final DateTime? picked = await showDatePicker(
-      context: context,
-      initialDate: initialDate,
-      firstDate: DateTime(2000),
-      lastDate: initialDate,
-    );
-
-    if (picked != null && picked != selectedDate) {
-      setState(() {
-        selectedDate = picked;
-      });
-
-      // Print the selected date in the desired format
-      final formattedDate = DateFormat('MMMM d, y').format(selectedDate);
-      if (kDebugMode) {
-        print('Selected date: $formattedDate');
-      }
-    }
-  }
-
   List<QuizModel> currentAffairs = [];
 
   int listLength = 6;
@@ -180,11 +157,13 @@ class _InsideCategoryScreenState extends State<InsideCategoryScreen> {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () => _selectDate(context),
-            icon: const Icon(Icons.calendar_today),
-          ),
-          IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const SearchScreen(),
+                ),
+              );
+            },
             icon: const Icon(Icons.search),
           ),
         ],

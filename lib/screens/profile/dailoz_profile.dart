@@ -474,6 +474,7 @@ class _DailozProfileState extends State<DailozProfile> {
                             ),
                             InkWell(
                               onTap: () async {
+                                Navigator.pop(context);
                                 SharedPreferences preferences =
                                     await SharedPreferences.getInstance();
                                 await preferences.clear();

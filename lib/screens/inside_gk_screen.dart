@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:currect_affairs/screens/search_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:currect_affairs/common/colors.dart';
 import 'package:currect_affairs/models/quiz_model.dart';
@@ -108,7 +109,13 @@ class _InsideGKScreenState extends State<InsideGKScreen> {
       appBar: AppBar(
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const SearchScreen(),
+                ),
+              );
+            },
             icon: const Icon(Icons.search),
           ),
         ],
