@@ -1,0 +1,60 @@
+name: currect_affairs
+description: "A new Flutter project."
+publish_to: "none"
+version: 1.0.0
+
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  flutter_rating_bar: ^4.0.1
+  url_launcher: ^6.2.1
+  in_app_review: ^2.0.8
+  provider: ^6.1.1
+  google_mobile_ads: ^3.1.0
+  package_info_plus: ^5.0.1
+  onesignal_flutter: ^5.0.4
+  in_app_purchase: ^3.1.11
+  share_plus: ^7.2.1
+  shared_preferences: ^2.2.2
+  firebase_core: ^2.17.0
+  firebase_auth: ^4.10.1
+  google_sign_in: ^6.1.5
+  cloud_firestore: ^4.9.3
+  translator: ^0.1.7
+  language_picker: ^0.4.3
+  connectivity_plus: ^5.0.2
+  uuid: ^4.2.1
+  intl: ^0.18.1
+  confetti: ^0.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: HindSiliguriBold
+      fonts:
+        - asset: assets/dailoz_assets/dailoz_fonts/HindSiliguri-Bold.ttf
+    - family: HindSiliguriLight
+      fonts:
+        - asset: assets/dailoz_assets/dailoz_fonts/HindSiliguri-Light.ttf
+    - family: HindSiliguriMedium
+      fonts:
+        - asset: assets/dailoz_assets/dailoz_fonts/HindSiliguri-Medium.ttf
+    - family: HindSiliguriRegular
+      fonts:
+        - asset: assets/dailoz_assets/dailoz_fonts/HindSiliguri-Regular.ttf
+    - family: HindSiliguriSemiBold
+      fonts:
+        - asset: assets/dailoz_assets/dailoz_fonts/HindSiliguri-SemiBold.ttf
