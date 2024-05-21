@@ -117,7 +117,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (appInfoData?['shouldShowAd'] && !isPremium) {
       adProvider.setShouldShowAd(true);
       adProvider.initializeInterstitialAd();
-      _loadAppOpenAd();
+      // _loadAppOpenAd();
     }
     setState(() {
       _isLoading = false;
